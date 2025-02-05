@@ -1,5 +1,7 @@
-const ListView = () => {
-  return <hr />;
+import { StyledHeader } from "./Header.styled";
+
+const Header = () => {
+  return <StyledHeader />;
 };
 
-export default ListView;
+export default Header;

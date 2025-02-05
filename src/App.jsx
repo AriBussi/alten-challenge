@@ -4,14 +4,22 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "./Global.styled";
+
 import Layout from "./views/Layout";
 import ListView from "./views/listView";
 import DetailView from "./views/DetailView";
 import CartView from "./views/CartView";
 import NotFoundView from "./views/NotFoundView";
-import "./App.css";
 
 function App() {
+  const theme = {
+    colors: {
+      white: "#fff",
+    },
+  };
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
@@ -23,7 +31,12 @@ function App() {
     )
   );
 
-  return <RouterProvider router={router} />;
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 }
 
 export default App;
