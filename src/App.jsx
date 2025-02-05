@@ -7,7 +7,7 @@ import {
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./Global.styled";
 
-import Layout from "./views/Layout";
+import Layout from "./components/Layout";
 import ListView from "./views/listView";
 import DetailView from "./views/DetailView";
 import CartView from "./views/CartView";
@@ -18,6 +18,10 @@ function App() {
     colors: {
       white: "#fff",
       black: "#000",
+      grey: "#79736D",
+    },
+    fonts: {
+      main: "Helvetica, Arial, sans-serif",
     },
   };
 

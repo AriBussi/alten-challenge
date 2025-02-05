@@ -2,13 +2,12 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     :root {
-        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        font-family: ${(props) => props.theme.fonts.main};;
         line-height: 1.5;
-        font-weight: 400;
+        font-weight: 300;
 
-        color-scheme: light dark;
-        color: rgba(255, 255, 255, 0.87);
-        background-color: #242424;
+        color-scheme: light;
+        color: ${(props) => props.theme.colors.black};
 
         font-synthesis: none;
         text-rendering: optimizeLegibility;
@@ -17,13 +16,11 @@ const GlobalStyles = createGlobalStyle`
     }
 
     html {
-    /* 10px */
-        font-size: 62.5%;
+        font-size: 62.5%; /* 10px */
     }
 
     body {
-    /* 16px */
-        font-size: 1.6rem;
+        font-size: 1.6rem; /* 16px */
         margin: 0;
     }
 
