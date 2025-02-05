@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const StyledCard = styled.div`
+export const StyledCard = styled(Link)`
   border: 0.5px solid ${(props) => props.theme.colors.black};
   padding: 1.6rem;
   text-transform: uppercase;
   font-size: 1.2rem;
+  display: block;
 
   &:not(:first-child) {
     border-top: 0;

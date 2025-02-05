@@ -29,7 +29,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
         <Route index element={<ListView />} />
-        <Route path="/detail" element={<DetailView />} />
+        <Route path="/detail/:id" element={<DetailView />} />
         <Route path="/cart" element={<CartView />} />
         <Route path="*" element={<NotFoundView />} />
       </Route>

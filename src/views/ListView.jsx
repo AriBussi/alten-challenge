@@ -29,7 +29,7 @@ const ListView = () => {
   return (
     <div>
       {isLoading ? (
-        <h2>Loading</h2>
+        <p>Loading</p>
       ) : (
         items.map((item) => <Card key={item.id} item={item} />)
       )}

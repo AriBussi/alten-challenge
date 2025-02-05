@@ -7,7 +7,7 @@ import {
 
 const Card = ({ item }) => {
   return (
-    <StyledCard>
+    <StyledCard to={`/detail/${item.id}`}>
       <StyledImage src={item.imageUrl} />
       <StyledBrand>{item.brand}</StyledBrand>
       <StyledInfo>
