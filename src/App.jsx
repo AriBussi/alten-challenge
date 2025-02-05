@@ -17,6 +17,7 @@ function App() {
   const theme = {
     colors: {
       white: "#fff",
+      black: "#000",
     },
   };
 
