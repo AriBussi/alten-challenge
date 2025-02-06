@@ -75,7 +75,7 @@ const Phone = ({ phone }) => {
         <Button
           label="Añadir"
           isDisabled={!selectedColor || !selectedStorage}
-          onClick={() => console.log("click")}
+          variant="primary"
         />
       </StyledAddToCartContainer>
 
