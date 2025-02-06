@@ -79,6 +79,7 @@ const Phone = ({ phone }) => {
           isDisabled={!selectedColor || !selectedStorage}
           onClick={() =>
             addToCart({
+              id: `${Date.now()}-${Math.random()}`,
               name: phone.name,
               color: selectedColor,
               storage: selectedStorage,

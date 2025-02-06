@@ -29,14 +29,17 @@ const CartView = () => {
               </p>
 
               <StyledItemPrice>{item.storage.price} EUR</StyledItemPrice>
-              <StyledDeleteButton type="button" onClick={removeFromCart}>
+              <StyledDeleteButton
+                type="button"
+                onClick={() => removeFromCart(item.id)}
+              >
                 Delete
               </StyledDeleteButton>
             </div>
           </StyledCartItem>
         ))}
       <StyledFooter>
-        <Button as="a" label="continue shopping" onClick={() => {}} />
+        <Button as="a" label="continue shopping" />
       </StyledFooter>
     </>
   );
