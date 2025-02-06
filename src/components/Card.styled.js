@@ -15,7 +15,6 @@ export const StyledCard = styled(Link)`
 
 export const StyledImage = styled.img`
   width: 100%;
-  object-fit: cover; /* Crop and maintain aspect ratio */
 `;
 
 export const StyledBrand = styled.p`

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Phone from "../components/Phone";
 
 const DetailView = () => {
   const { id } = useParams();
@@ -26,7 +27,7 @@ const DetailView = () => {
 
     fetchItem();
   }, [id]);
-  return isLoading ? <p>Loading</p> : <h1>{item.name}</h1>;
+  return isLoading ? <p>Loading</p> : <Phone phone={item} />;
 };
 
 export default DetailView;
