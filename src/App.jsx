@@ -18,7 +18,10 @@ function App() {
     colors: {
       white: "#fff",
       black: "#000",
-      grey: "#79736D",
+      neutral1: "#F3F2F2",
+      neutral2: "#CCC",
+      neutral3: "#C2BFBC",
+      neutral4: "#79736D",
     },
     fonts: {
       main: "Helvetica, Arial, sans-serif",

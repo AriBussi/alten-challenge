@@ -25,7 +25,11 @@ export const StyledOptionGroup = styled.fieldset`
 export const StyledStorageOption = styled.label`
   width: 9.5rem;
   height: 4.8rem;
-  border: 1px solid ${(props) => (props.$isSelected ? "#000" : "#CCC")};
+  border: 1px solid
+    ${(props) =>
+      props.$isSelected
+        ? props.theme.colors.black
+        : props.theme.colors.neutral2};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +39,11 @@ export const StyledStorageOption = styled.label`
 export const StyledColorOption = styled.label`
   width: 2.4rem;
   height: 2.4rem;
-  border: 1px solid ${(props) => (props.$isSelected ? "#000" : "#CCC")};
+  border: 1px solid
+    ${(props) =>
+      props.$isSelected
+        ? props.theme.colors.black
+        : props.theme.colors.neutral2};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,4 +57,8 @@ export const StyledColorOption = styled.label`
     inset: 1px;
     background-color: ${(props) => props.$color};
   }
+`;
+
+export const StyledAddToCartContainer = styled.div`
+  margin: 4rem 0 8rem 0;
 `;
