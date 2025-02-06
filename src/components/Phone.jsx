@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   StyledImage,
   StyledPhoneTitle,
+  StyledPhonePrice,
   StyledOptionGroup,
   StyledStorageOption,
   StyledColorOption,
@@ -17,7 +18,9 @@ const Phone = ({ phone }) => {
         src={selectedColor?.imageUrl || phone.colorOptions[0].imageUrl}
       />
       <StyledPhoneTitle>{phone.name}</StyledPhoneTitle>
-      <p>{selectedStorage?.price || `From ${phone.basePrice}`} EUR</p>
+      <StyledPhonePrice>
+        {selectedStorage?.price || `From ${phone.basePrice}`} EUR
+      </StyledPhonePrice>
 
       <StyledOptionGroup>
         <legend>Storage. How much space do you need?</legend>

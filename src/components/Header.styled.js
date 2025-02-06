@@ -9,6 +9,7 @@ export const StyledHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-inline: 1.6rem;
+  font-size: 1.6rem;
 `;
 
 export const StyledCart = styled.div`

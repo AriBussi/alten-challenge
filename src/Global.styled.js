@@ -15,19 +15,23 @@ const GlobalStyles = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
     }
 
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
     html {
         font-size: 62.5%; /* 10px */
     }
 
     body {
-        font-size: 1.6rem; /* 16px */
+        font-size: 1.2rem;
         margin: 0;
     }
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+    a {
+        text-decoration: none;
     }
 
     .visually-hidden {

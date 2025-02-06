@@ -7,12 +7,19 @@ export const StyledImage = styled.img`
 export const StyledPhoneTitle = styled.h1`
   text-transform: uppercase;
   font-weight: 300;
+  font-size: 2rem;
+`;
+
+export const StyledPhonePrice = styled.p`
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
 `;
 
 export const StyledOptionGroup = styled.fieldset`
   display: flex;
   border: 0;
   text-transform: uppercase;
+  margin-top: 3.2rem;
 `;
 
 export const StyledStorageOption = styled.label`
@@ -22,6 +29,7 @@ export const StyledStorageOption = styled.label`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2.2rem;
 `;
 
 export const StyledColorOption = styled.label`
@@ -33,6 +41,7 @@ export const StyledColorOption = styled.label`
   align-items: center;
   margin-right: 1.6rem;
   position: relative;
+  margin-top: 2rem;
 
   &:before {
     content: "";
