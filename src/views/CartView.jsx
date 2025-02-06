@@ -39,7 +39,7 @@ const CartView = () => {
           </StyledCartItem>
         ))}
       <StyledFooter>
-        <Button as="a" label="continue shopping" />
+        <Button href="/" label="continue shopping" />
       </StyledFooter>
     </>
   );

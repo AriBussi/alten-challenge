@@ -2,7 +2,7 @@ import { StyledButton } from "./Button.styled";
 
 const Button = ({
   variant = "standard",
-  as = "button",
+  href = undefined,
   label,
   isDisabled,
   onClick,
@@ -19,7 +19,8 @@ const Button = ({
       onClick={handleClick}
       $disabled={isDisabled}
       $variant={variant}
-      as={as}
+      as={href ? "a" : "button"}
+      href={href}
     >
       {label}
     </StyledButton>

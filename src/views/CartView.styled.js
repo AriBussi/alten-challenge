@@ -27,7 +27,7 @@ export const StyledItemPrice = styled.p`
 export const StyledDeleteButton = styled.button`
   color: red;
   border: 0;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: transparent;
   margin-top: 3.3rem;
 `;
 
@@ -37,4 +37,5 @@ export const StyledFooter = styled.footer`
   left: 0;
   right: 0;
   padding: 2.4rem 1.6rem;
+  background-color: ${({ theme }) => theme.colors.white};
 `;
