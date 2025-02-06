@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Button from "./Button";
+import Specs from "./Specs";
 import {
   StyledImage,
-  StyledPhoneTitle,
+  StyledTitle,
   StyledPhonePrice,
   StyledOptionGroup,
   StyledStorageOption,
@@ -19,7 +20,7 @@ const Phone = ({ phone }) => {
       <StyledImage
         src={selectedColor?.imageUrl || phone.colorOptions[0].imageUrl}
       />
-      <StyledPhoneTitle>{phone.name}</StyledPhoneTitle>
+      <StyledTitle>{phone.name}</StyledTitle>
       <StyledPhonePrice>
         {selectedStorage?.price || `From ${phone.basePrice}`} EUR
       </StyledPhonePrice>
@@ -77,6 +78,15 @@ const Phone = ({ phone }) => {
           onClick={() => console.log("click")}
         />
       </StyledAddToCartContainer>
+
+      <Specs
+        data={[
+          ["Brand", phone.brand],
+          ["Name", phone.name],
+          ["Description", phone.description],
+          ...Object.entries(phone.specs),
+        ]}
+      />
     </div>
   );
 };

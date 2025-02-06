@@ -4,7 +4,7 @@ export const StyledImage = styled.img`
   width: 100%;
 `;
 
-export const StyledPhoneTitle = styled.h1`
+export const StyledTitle = styled.h1`
   text-transform: uppercase;
   font-weight: 300;
   font-size: 2rem;
@@ -47,9 +47,8 @@ export const StyledColorOption = styled.label`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 1.6rem;
   position: relative;
-  margin-top: 2rem;
+  margin: 2rem 1.6rem 0.8rem 0;
 
   &:before {
     content: "";
