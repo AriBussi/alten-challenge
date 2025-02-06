@@ -32,10 +32,20 @@ export const StyledDeleteButton = styled.button`
 `;
 
 export const StyledFooter = styled.footer`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 2.4rem 1.6rem;
   background-color: ${({ theme }) => theme.colors.white};
+`;
+
+export const StyledFooterRow = styled.div`
+  display: flex;
+  gap: 1.2rem;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+  font-weight: 400;
 `;

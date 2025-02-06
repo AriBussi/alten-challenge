@@ -8,6 +8,7 @@ import {
   StyledItemPrice,
   StyledDeleteButton,
   StyledFooter,
+  StyledFooterRow,
 } from "./CartView.styled";
 
 const CartView = () => {
@@ -39,7 +40,16 @@ const CartView = () => {
           </StyledCartItem>
         ))}
       <StyledFooter>
-        <Button href="/" label="continue shopping" />
+        {!!count && (
+          <StyledFooterRow>
+            <p>total</p>
+            <p>EUR</p>
+          </StyledFooterRow>
+        )}
+        <StyledFooterRow>
+          <Button href="/" label="continue shopping" />
+          {!!count && <Button label="pay" variant="primary" />}
+        </StyledFooterRow>
       </StyledFooter>
     </>
   );
