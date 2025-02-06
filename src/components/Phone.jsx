@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Button from "./Button";
 import Specs from "./Specs";
+import { CartContext } from "../context/cartContext";
 import {
   StyledImage,
   StyledTitle,
@@ -14,6 +15,7 @@ import {
 const Phone = ({ phone }) => {
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedStorage, setSelectedStorage] = useState(null);
+  const { addToCart } = useContext(CartContext);
 
   return (
     <div>
@@ -75,6 +77,13 @@ const Phone = ({ phone }) => {
         <Button
           label="Añadir"
           isDisabled={!selectedColor || !selectedStorage}
+          onClick={() =>
+            addToCart({
+              name: phone.name,
+              color: selectedColor,
+              storage: selectedStorage,
+            })
+          }
           variant="primary"
         />
       </StyledAddToCartContainer>

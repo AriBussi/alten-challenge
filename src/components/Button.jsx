@@ -1,6 +1,12 @@
 import { StyledButton } from "./Button.styled";
 
-const Button = ({ variant = "standard", label, isDisabled, onClick }) => {
+const Button = ({
+  variant = "standard",
+  as = "button",
+  label,
+  isDisabled,
+  onClick,
+}) => {
   const handleClick = () => {
     if (!isDisabled && onClick) {
       onClick();
@@ -13,6 +19,7 @@ const Button = ({ variant = "standard", label, isDisabled, onClick }) => {
       onClick={handleClick}
       $disabled={isDisabled}
       $variant={variant}
+      as={as}
     >
       {label}
     </StyledButton>
