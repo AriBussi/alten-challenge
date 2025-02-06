@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Specs from "./Specs";
 import { CartContext } from "../context/cartContext";
@@ -16,6 +17,18 @@ const Phone = ({ phone }) => {
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedStorage, setSelectedStorage] = useState(null);
   const { addToCart } = useContext(CartContext);
+  const navigate = useNavigate();
+
+  const handleAdd = () => {
+    addToCart({
+      id: `${Date.now()}-${Math.random()}`,
+      name: phone.name,
+      color: selectedColor,
+      storage: selectedStorage,
+    });
+
+    navigate("/");
+  };
 
   return (
     <div>
@@ -77,14 +90,7 @@ const Phone = ({ phone }) => {
         <Button
           label="Añadir"
           isDisabled={!selectedColor || !selectedStorage}
-          onClick={() =>
-            addToCart({
-              id: `${Date.now()}-${Math.random()}`,
-              name: phone.name,
-              color: selectedColor,
-              storage: selectedStorage,
-            })
-          }
+          onClick={handleAdd}
           variant="primary"
         />
       </StyledAddToCartContainer>
