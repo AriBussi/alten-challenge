@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 import {
   StyledImage,
   StyledPhoneTitle,
@@ -6,6 +7,7 @@ import {
   StyledOptionGroup,
   StyledStorageOption,
   StyledColorOption,
+  StyledAddToCartContainer,
 } from "./Phone.styled";
 
 const Phone = ({ phone }) => {
@@ -65,7 +67,16 @@ const Phone = ({ phone }) => {
           );
         })}
       </StyledOptionGroup>
+
       <p>{selectedColor?.name}</p>
+
+      <StyledAddToCartContainer>
+        <Button
+          label="Añadir"
+          isDisabled={!selectedColor || !selectedStorage}
+          onClick={() => console.log("click")}
+        />
+      </StyledAddToCartContainer>
     </div>
   );
 };
