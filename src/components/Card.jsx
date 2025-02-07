@@ -5,9 +5,9 @@ import {
   StyledInfo,
 } from "./Card.styled";
 
-const Card = ({ item }) => {
+const Card = ({ className, item }) => {
   return (
-    <StyledCard to={`/detail/${item.id}`}>
+    <StyledCard className={className} to={`/detail/${item.id}`}>
       <StyledImage src={item.imageUrl} />
       <StyledBrand>{item.brand}</StyledBrand>
       <StyledInfo>
