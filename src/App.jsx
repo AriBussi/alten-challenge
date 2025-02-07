@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./Global.styled";
-
 import Layout from "./components/Layout";
 import ListView from "./views/listView";
 import DetailView from "./views/DetailView";
