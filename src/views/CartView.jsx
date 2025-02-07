@@ -12,7 +12,7 @@ import {
 } from "./CartView.styled";
 
 const CartView = () => {
-  const { cartItems, removeFromCart } = useContext(CartContext);
+  const { cartItems, removeFromCart, getTotalPrice } = useContext(CartContext);
 
   const count = cartItems?.length;
 
@@ -43,7 +43,7 @@ const CartView = () => {
         {!!count && (
           <StyledFooterRow>
             <p>total</p>
-            <p>EUR</p>
+            <p>{getTotalPrice()} EUR</p>
           </StyledFooterRow>
         )}
         <StyledFooterRow>
