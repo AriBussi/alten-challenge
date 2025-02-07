@@ -21,7 +21,7 @@ const Header = () => {
   const count = getCartCount();
 
   const showBackButton = location.pathname.includes("/detail/");
-  const showCart = location.pathname.includes("/cart");
+  const showCart = !location.pathname.includes("/cart");
 
   return (
     <StyledHeaderSpace $spacing={showBackButton ? "12.4" : "8"}>
