@@ -30,8 +30,9 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
     }
 
-    a {
+    a, a:visited, a:hover, a:active {
         text-decoration: none;
+        color: inherit;
     }
 
     .visually-hidden {

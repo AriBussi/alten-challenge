@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const StyledHeader = styled.div`
   background-color: ${(props) => props.theme.colors.white};
@@ -13,7 +14,11 @@ export const StyledHeader = styled.div`
   position: fixed;
 `;
 
-export const StyledCart = styled.div`
+export const StyledLogoLink = styled(Link)`
+  height: 3rem;
+`;
+
+export const StyledCartLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;

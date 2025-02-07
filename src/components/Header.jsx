@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { StyledHeader, StyledCart } from "./Header.styled";
+import { useLocation } from "react-router-dom";
+import { StyledHeader, StyledLogoLink, StyledCartLink } from "./Header.styled";
 import { CartContext } from "../context/cartContext";
 
 import logo from "../assets/logo.svg";
@@ -8,16 +9,21 @@ import full from "../assets/bag-full.svg";
 
 const Header = () => {
   const { getCartCount } = useContext(CartContext);
+  const location = useLocation();
 
   const count = getCartCount();
 
   return (
     <StyledHeader>
-      <img src={logo} />
-      <StyledCart>
-        <img src={count === 0 ? empty : full} />
-        <p>{count}</p>
-      </StyledCart>
+      <StyledLogoLink to="/">
+        <img src={logo} />
+      </StyledLogoLink>
+      {location.pathname !== "/cart" && (
+        <StyledCartLink to="/cart">
+          <img src={count === 0 ? empty : full} />
+          <p>{count}</p>
+        </StyledCartLink>
+      )}
     </StyledHeader>
   );
 };

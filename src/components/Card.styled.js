@@ -17,7 +17,7 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledBrand = styled.p`
-  color: ${(props) => props.theme.colors.grey};
+  color: ${(props) => props.theme.colors.neutral4};
   font-size: 1rem;
 `;
 
