@@ -3,9 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Specs from "./Specs";
 import { CartContext } from "../context/cartContext";
-import carret from "../assets/carret.svg";
 import {
-  StyledBackLink,
   StyledImage,
   StyledTitle,
   StyledPhonePrice,
@@ -34,11 +32,6 @@ const Phone = ({ phone }) => {
 
   return (
     <div>
-      <StyledBackLink to="/">
-        <img src={carret} />
-        Back
-      </StyledBackLink>
-
       <StyledImage
         src={selectedColor?.imageUrl || phone.colorOptions[0].imageUrl}
       />

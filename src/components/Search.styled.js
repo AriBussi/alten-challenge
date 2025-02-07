@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledSearch = styled.form`
   text-transform: uppercase;
-  margin-bottom: 3.6rem;
+  margin: 3rem 0 3.6rem 0;
 `;
 
 export const StyledInput = styled.input`

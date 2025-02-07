@@ -1,12 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-
-export const StyledBackLink = styled(Link)`
-  display: flex;
-  gap: 0.4rem;
-  align-items: center;
-  text-transform: uppercase;
-`;
 
 export const StyledImage = styled.img`
   width: 100%;
