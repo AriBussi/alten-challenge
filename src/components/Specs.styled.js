@@ -8,13 +8,13 @@ export const StyledTitle = styled.h2`
 `;
 
 export const StyledSpec = styled.div`
-  border-top: 1px solid ${(props) => props.theme.colors.black};
+  border-top: 1px solid ${({ theme }) => theme.colors.black};
   display: flex;
   gap: 1.2rem;
   padding-block: 1.6rem;
 
   &:last-child {
-    border-bottom: 1px solid ${(props) => props.theme.colors.black};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.black};
   }
 
   > dt {

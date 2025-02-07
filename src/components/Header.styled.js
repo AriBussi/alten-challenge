@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const StyledHeader = styled.div`
-  background-color: ${(props) => props.theme.colors.white};
-  color: ${(props) => props.theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.black};
   width: 100%;
   height: 8rem;
   display: flex;
@@ -12,6 +12,7 @@ export const StyledHeader = styled.div`
   padding-inline: 1.6rem;
   font-size: 1.6rem;
   position: fixed;
+  z-index: 1;
 `;
 
 export const StyledLogoLink = styled(Link)`

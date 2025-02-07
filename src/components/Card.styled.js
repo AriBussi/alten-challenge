@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const StyledCard = styled(Link)`
-  border: 0.5px solid ${(props) => props.theme.colors.black};
+  border: 0.5px solid ${({ theme }) => theme.colors.black};
   padding: 1.6rem;
   text-transform: uppercase;
   display: block;
@@ -17,12 +17,12 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledBrand = styled.p`
-  color: ${(props) => props.theme.colors.neutral4};
+  color: ${({ theme }) => theme.colors.neutral4};
   font-size: 1rem;
 `;
 
 export const StyledInfo = styled.dl`
-  color: ${(props) => props.theme.colors.black};
+  color: ${({ theme }) => theme.colors.black};
   display: flex;
   justify-content: space-between;
 `;
