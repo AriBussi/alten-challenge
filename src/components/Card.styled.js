@@ -7,7 +7,7 @@ export const StyledCard = styled(Link)`
   text-transform: uppercase;
   display: block;
 
-  &:not(:first-child) {
+  &:not(:first-of-type) {
     border-top: 0;
   }
 `;
