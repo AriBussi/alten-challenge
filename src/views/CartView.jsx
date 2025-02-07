@@ -12,9 +12,10 @@ import {
 } from "./CartView.styled";
 
 const CartView = () => {
-  const { cartItems, removeFromCart, getTotalPrice } = useContext(CartContext);
+  const { cartItems, removeFromCart, getCartCount, getTotalPrice } =
+    useContext(CartContext);
 
-  const count = cartItems?.length;
+  const count = getCartCount();
 
   return (
     <>
