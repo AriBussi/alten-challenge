@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     :root {
-        font-family: ${({ theme }) => theme.fonts.main};;
+        font-family: ${({ theme }) => theme.fonts.main};
         line-height: 1.5;
         font-weight: 300;
 

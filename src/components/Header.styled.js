@@ -1,12 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const StyledBackLink = styled(Link)`
-  display: flex;
-  gap: 0.4rem;
-  align-items: center;
-  text-transform: uppercase;
-  padding-block: 1.2rem;
+export const StyledHeaderSpace = styled.div`
+  padding-bottom: ${({ $spacing }) => `${$spacing}rem`};
 `;
 
 export const StyledHeader = styled.div`
@@ -35,4 +31,12 @@ export const StyledCartLink = styled(Link)`
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
+`;
+
+export const StyledBackLink = styled(Link)`
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  text-transform: uppercase;
+  padding-block: 1.2rem;
 `;

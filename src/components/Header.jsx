@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { CartContext } from "../context/cartContext";
 import {
+  StyledHeaderSpace,
   StyledHeader,
   StyledNav,
   StyledLogoLink,
@@ -19,27 +20,32 @@ const Header = () => {
   const location = useLocation();
   const count = getCartCount();
 
-  return (
-    <StyledHeader>
-      <StyledNav>
-        <StyledLogoLink to="/">
-          <img src={logo} />
-        </StyledLogoLink>
-        {location.pathname !== "/cart" && (
-          <StyledCartLink to="/cart">
-            <img src={count === 0 ? empty : full} />
-            <p>{count}</p>
-          </StyledCartLink>
-        )}
-      </StyledNav>
+  const showBackButton = location.pathname.includes("/detail/");
+  const showCart = location.pathname.includes("/cart");
 
-      {location.pathname.includes("/detail/") && (
-        <StyledBackLink to="/">
-          <img src={carret} />
-          Back
-        </StyledBackLink>
-      )}
-    </StyledHeader>
+  return (
+    <StyledHeaderSpace $spacing={showBackButton ? "12.4" : "8"}>
+      <StyledHeader>
+        <StyledNav>
+          <StyledLogoLink to="/">
+            <img src={logo} />
+          </StyledLogoLink>
+          {showCart && (
+            <StyledCartLink to="/cart">
+              <img src={count === 0 ? empty : full} />
+              <p>{count}</p>
+            </StyledCartLink>
+          )}
+        </StyledNav>
+
+        {showBackButton && (
+          <StyledBackLink to="/">
+            <img src={carret} />
+            Back
+          </StyledBackLink>
+        )}
+      </StyledHeader>
+    </StyledHeaderSpace>
   );
 };
 
