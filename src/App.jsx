@@ -7,7 +7,7 @@ import {
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./Global.styled";
 import Layout from "./components/Layout";
-import ListView from "./views/listView";
+import ListView from "./views/ListView";
 import DetailView from "./views/DetailView";
 import CartView from "./views/CartView";
 import NotFoundView from "./views/NotFoundView";
