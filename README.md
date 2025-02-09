@@ -13,7 +13,8 @@ This challenge is a web application for browsing, searching, and managing a mobi
 2. **Install dependencies**:
 
    ```bash
-   npm install
+   cd alten-challenge
+   npm i
    ```
 
 3. **Create a `.env.local` file**:
@@ -47,8 +48,8 @@ This challenge is a web application for browsing, searching, and managing a mobi
 - **Persistent cart**: Items in the cart are stored on page refresh.
 - **Dynamic product details**: On the product detail page, users can view additional specifications and select variations like color and storage.
 
-## Things to Improve with Extra Time
+## Potential improvement with extra time
 
-- **Testing**: Unit tests to ensure application reliability.
-- **TypeScript**: Add type safety to enhance code quality and developer experience.
-- **a11y**: Accessibility improvements for a more inclusive app.
+- **Testing**: Unit and e2e tests to ensure application reliability.
+- **A11y**: Accessibility improvements for a more inclusive app.
+- **Type safety**: Typescript could be added to enhance code quality and developer experience.
