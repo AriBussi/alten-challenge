@@ -31,6 +31,8 @@ This challenge is a web application for browsing, searching, and managing a mobi
    npm run dev
    ```
 
+   The app will be available at [http://localhost:5173](http://localhost:5173).
+
 ## Architecture
 
 - **React** is used for building the UI and managing the application state.
@@ -51,5 +53,11 @@ This challenge is a web application for browsing, searching, and managing a mobi
 ## Potential improvement with extra time
 
 - **Testing**: Unit and e2e tests to ensure application reliability.
-- **A11y**: Accessibility improvements for a more inclusive app.
+
+- **A11y**: Accessibility improvements. While most a11y is achieved through good design and a semantic markup, there is still room for improvements if the aim is AAA standard.
+
 - **Type safety**: Typescript could be added to enhance code quality and developer experience.
+
+- **Backend Image Standardization**: : Standardizing image sizes on the backend would improve the app's visual consistency and overall user experience.
+
+- **Front UI**: Adding transitions, loaders and hovers would provide a much smoother and complete look and feel on the UX.
