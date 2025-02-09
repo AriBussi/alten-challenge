@@ -52,6 +52,8 @@ export const StyledFooter = styled.footer`
   }
 
   @media (min-width: 768px) {
+    padding-top: 1.6rem;
+
     > a {
       max-width: 20rem;
       min-width: unset;
