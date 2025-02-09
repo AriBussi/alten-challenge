@@ -13,6 +13,16 @@ const GlobalStyles = createGlobalStyle`
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+
+        --page-padding: 1.6rem;
+
+        @media (min-width: 600px) {
+            --page-padding: 4rem;
+        }
+
+        @media (min-width: 1460px) {
+            --page-padding: 10rem;
+        }
     }
 
     * {

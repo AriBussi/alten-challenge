@@ -11,14 +11,21 @@ export const StyledTitle = styled.h2`
 export const StyledCarousel = styled.div`
   overflow-x: scroll;
   display: flex;
-  flex-wrap: nowrap;
 `;
 
 export const StyledCarouselCard = styled(Card)`
-  max-width: 33rem;
   flex-shrink: 0;
+  max-width: 80dvw;
 
-  &:not(:first-of-type) {
-    border-top: 0.5px solid ${({ theme }) => theme.colors.black};
+  @media (min-width: 600px) {
+    width: 40dvw;
+  }
+
+  @media (min-width: 768px) {
+    width: 38dvw;
+  }
+
+  @media (min-width: 1100px) {
+    width: 30%;
   }
 `;

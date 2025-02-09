@@ -8,7 +8,7 @@ import {
   StyledItemPrice,
   StyledDeleteButton,
   StyledFooter,
-  StyledFooterRow,
+  StyledTotalPrice,
 } from "./CartView.styled";
 
 const CartView = () => {
@@ -22,7 +22,7 @@ const CartView = () => {
       <StyledCartCount>cart ({count})</StyledCartCount>
       {cartItems.length > 0 &&
         cartItems.map((item) => (
-          <StyledCartItem key={item.name}>
+          <StyledCartItem key={item.id}>
             <StyledItemImage src={item.color.imageUrl} />
             <div>
               <p>{item.name}</p>
@@ -41,16 +41,16 @@ const CartView = () => {
           </StyledCartItem>
         ))}
       <StyledFooter>
+        <Button href="/" label="continue shopping" />
         {!!count && (
-          <StyledFooterRow>
-            <p>total</p>
-            <p>{getTotalPrice()} EUR</p>
-          </StyledFooterRow>
+          <div>
+            <StyledTotalPrice>
+              <p>total</p>
+              <p>{getTotalPrice()} EUR</p>
+            </StyledTotalPrice>
+            <Button label="pay" variant="primary" />
+          </div>
         )}
-        <StyledFooterRow>
-          <Button href="/" label="continue shopping" />
-          {!!count && <Button label="pay" variant="primary" />}
-        </StyledFooterRow>
       </StyledFooter>
     </>
   );

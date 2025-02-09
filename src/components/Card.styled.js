@@ -5,15 +5,30 @@ export const StyledCard = styled(Link)`
   border: 0.5px solid ${({ theme }) => theme.colors.black};
   padding: 1.6rem;
   text-transform: uppercase;
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4rem;
+  grid-gap: 1rem;
+  width: 100%;
+  min-height: 34.5rem;
 
-  &:not(:first-of-type) {
-    border-top: 0;
+  @media (min-width: 600px) {
+    width: 50%;
+  }
+
+  @media (min-width: 978px) {
+    width: 33.3%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 25%;
   }
 `;
 
 export const StyledImage = styled.img`
-  width: 100%;
+  max-width: 100%;
+  max-height: 26rem;
+  place-self: center;
 `;
 
 export const StyledBrand = styled.p`

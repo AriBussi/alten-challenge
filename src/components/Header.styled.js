@@ -7,7 +7,7 @@ export const StyledHeaderSpace = styled.div`
 
 export const StyledHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
-  padding-inline: 1.6rem;
+  padding-inline: var(--page-padding);
   position: fixed;
   z-index: 1;
   width: 100%;

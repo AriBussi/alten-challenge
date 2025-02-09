@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Card from "../components/Card";
 import Search from "../components/Search";
 import { getUniqueItems } from "../utils/getUniqueItems";
+import { StyledMasonry } from "./ListView.styled";
 
 const ListView = () => {
   const [items, setItems] = useState([]);
@@ -40,11 +41,13 @@ const ListView = () => {
         results={items.length}
         onSearch={(string) => fetchItems(string)}
       />
-      {isLoading ? (
-        <p>Loading</p>
-      ) : (
-        items.map((item) => <Card key={item.id} item={item} />)
-      )}
+      <StyledMasonry>
+        {isLoading ? (
+          <p>Loading</p>
+        ) : (
+          items.map((item) => <Card key={item.id} item={item} />)
+        )}
+      </StyledMasonry>
     </div>
   );
 };

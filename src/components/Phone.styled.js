@@ -1,7 +1,35 @@
 import styled from "styled-components";
 
+export const StyledMain = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 8rem;
+  max-width: 120rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: space-between;
+
+    > div {
+      align-self: center;
+      flex-grow: 0.5;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-height: 80dvh;
+  }
+`;
+
 export const StyledImage = styled.img`
-  width: 100%;
+  min-width: 26rem;
+  max-width: 50dvw;
+
+  @media (min-width: 1200px) {
+    max-width: 40dvw;
+  }
 `;
 
 export const StyledTitle = styled.h1`
@@ -36,6 +64,10 @@ export const StyledStorageOption = styled.label`
   margin-top: 2.2rem;
 `;
 
+export const StyledSelectedName = styled.p`
+  min-height: 2rem;
+`;
+
 export const StyledColorOption = styled.label`
   width: 2.4rem;
   height: 2.4rem;
@@ -59,5 +91,5 @@ export const StyledColorOption = styled.label`
 `;
 
 export const StyledAddToCartContainer = styled.div`
-  margin: 4rem 0 8rem 0;
+  margin-top: 4rem;
 `;
