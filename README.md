@@ -33,6 +33,12 @@ This challenge is a web application for browsing, searching, and managing a mobi
 
    The app will be available at [http://localhost:5173](http://localhost:5173).
 
+5. **Run e2e**:
+
+   ```bash
+   npx cypress open
+   ```
+
 ## Architecture
 
 - **React** is used for building the UI and managing the application state.
@@ -42,6 +48,7 @@ This challenge is a web application for browsing, searching, and managing a mobi
 - **Styled Components** is used for styling the application, providing scoped, component-level styles.
 - The app makes use of **API calls** to retrieve and filter mobile phones dynamically based on user search input.
 - **ESLint** is used to ensure consistent code style.
+- **ESLint** cypress.io is used for e2e coverage.
 
 ## Key Features
 
@@ -52,7 +59,7 @@ This challenge is a web application for browsing, searching, and managing a mobi
 
 ## Potential improvement with extra time
 
-- **Testing**: Unit and e2e tests to ensure application reliability.
+- **Testing**: Unit tests to ensure application reliability.
 
 - **A11y**: Accessibility improvements. While most a11y is achieved through good design and a semantic markup, there is still room for improvements if the aim is AAA standard.
 
